@@ -24,9 +24,9 @@ public:
 
     // Общедоступные слоты для вывода результатов в форму (возможно, лишнее)
 public slots:
-    void setTrainNumber(int n); // Задание номера поезда
+    void setTrainNumber(QString n); // Задание номера поезда
     void setDestinationStation(QString d); // Задание станции прибытия
-    void setDepartureTime(QTime t); // Задание времени отбытия
+    void setDepartureTime(QString t); // Задание времени отбытия
 
 };
 
