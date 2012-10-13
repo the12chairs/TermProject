@@ -1,7 +1,17 @@
 #include "train.h"
 
-Train::Train(){ // Конструктор по умолчанию; пуст
 
+
+/*
+ * Реализация класса расписания. Прототип см. в train.h
+ */
+
+Train::Train(){ // Конструктор по умолчанию
+    /*
+    this->TrainNumber = NULL;
+    this->DestinationStation = NULL;
+    this->DepartureTime = NULL;
+    */
 }
 
 // Перегруженный конструктор
@@ -13,21 +23,30 @@ Train::Train(int n, QString d, QTime t){
 
 // Деструктор
 Train::~Train(){
-
+    delete this; // Нужно убирать за собой
 }
 
 // Реализация интерфейса
 QString Train::getTrainNumber(){
-    QString conv = QString::number(this->TrainNumber);
+    QString conv = QString::number(this->TrainNumber); // Костыль для конвертации int в QString
     return conv;
 }
 
+// Валидаторы на регулярных выражениях
+
+bool Train::isGoodTrainNumber(QString n){
+
+}
+
+
+
+//Комментарии излишни
 QString Train::getDestinationStation(){
     return this->DestinationStation;
 }
 
 QString Train::getDepartureTime(){
-    this->DepartureTime.toString("hh:mm:ss");
+    return this->DepartureTime.toString("hh:mm:ss");
 }
 
 void Train::setTrainNumber(QString n){
@@ -39,6 +58,7 @@ void Train::setDestinationStation(QString d){
 }
 
 void Train::setDepartureTime(QString t){
+    // Конвертируем полученное строковое время в QTime
     QTime conv;
     conv.toString(t);
     this->DepartureTime = conv;

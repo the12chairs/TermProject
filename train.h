@@ -3,24 +3,36 @@
 #include <QTime>
 #define TRAIN_H
 
+
+/*
+ * Класс расписания. Содержит номер поезда, конечную станцию и время отправления.
+ * Также имеет интерфейс для работы с атрибутами и интерфейс слотов для общения с формой.
+ */
+
 class Train
 {
-private:
-    //Аттрибуты
-    int TrainNumber; // Номер поезда
-    QString DestinationStation; // Пункт назначения
-    QTime DepartureTime; // Время отправления
-public:
+    //Атрибуты
+private: int TrainNumber; // Номер поезда
+private: QString DestinationStation; // Пункт назначения
+private: QTime DepartureTime; // Время отправления
     //Методы
-    Train(); // Конструктор по умолчанию
-    Train(int n, QString d, QTime t); // Перегруженный конструктор с аттрибутами
-    ~Train();// Деструктор
+public: Train(); // Конструктор по умолчанию
+public: Train(int n, QString d, QTime t); // Перегруженный конструктор с аттрибутами
+public: ~Train();// Деструктор
 
     // Интерфейс класса
     //TODO: Возможно, лишний метод
-    QString getTrainNumber(); // Для доступа к строковому значению номера поезда
-    QString getDestinationStation(); // Для доступа к пункту назначения
-    QString getDepartureTime(); // Для доступа к времени отправления
+public: QString getTrainNumber(); // Для доступа к строковому значению номера поезда
+public: QString getDestinationStation(); // Для доступа к пункту назначения
+public: QString getDepartureTime(); // Для доступа к времени отправления
+
+    //--------------------------------------------------------------
+    // Валидация введенных значений
+public: bool isGoodTrainNumber(QString n);
+public: bool isGoodDestinationStation(QString d);
+public: bool isGoodDepartureTime(QString t);
+    //--------------------------------------------------------------
+
 
     // Общедоступные слоты для вывода результатов в форму (возможно, лишнее)
 public slots:
