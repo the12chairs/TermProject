@@ -29,6 +29,8 @@ public: ~MainWindow();
 private slots:
     void on_AddRaspis_clicked();
 
+    void on_ShowRaspis_clicked();
+
 private: Ui::MainWindow *ui;
 };
 
