@@ -1,9 +1,9 @@
 #ifndef ADDDIALOG_H
-#define ADDDIALOG_H
-
 #include <QDialog>
 #include <QRegExp>
 #include <QRegExpValidator>
+#define ADDDIALOG_H
+
 
 /*
  * Диалог для создания экземпляра расписания

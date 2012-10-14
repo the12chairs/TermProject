@@ -1,10 +1,9 @@
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
 #include <QMainWindow>
 #include <QVector>
-
 #include "train.h"
+#define MAINWINDOW_H
+
 
 /*
  * Главный виджет приложения. Показывает само расписание.
