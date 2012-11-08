@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>392</width>
-    <height>286</height>
+    <width>464</width>
+    <height>288</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,16 +27,6 @@
      <string>Расписание</string>
     </property>
    </widget>
-   <widget class="QTableView" name="InfoList">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>371</width>
-      <height>211</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="AddRaspis">
     <property name="geometry">
      <rect>
@@ -50,13 +40,63 @@
      <string>Создать</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="infoList">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>451</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="rowCount">
+     <number>10</number>
+    </property>
+    <property name="columnCount">
+     <number>6</number>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>135</number>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column>
+     <property name="text">
+      <string>Номер поезда</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пункт прибытия</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Время отпраления</string>
+     </property>
+    </column>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>392</width>
+     <width>464</width>
      <height>21</height>
     </rect>
    </property>

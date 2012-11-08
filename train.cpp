@@ -35,7 +35,7 @@ QString Train::getTrainNumber(){
 // Валидаторы на регулярных выражениях
 
 bool Train::isGoodTrainNumber(QString n){
-
+    return true;
 }
 
 

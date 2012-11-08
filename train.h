@@ -21,7 +21,6 @@ public: Train(int n, QString d, QTime t); // Перегруженный конс
 public: ~Train();// Деструктор
 
     // Интерфейс класса
-    //TODO: Возможно, лишний метод
 public: QString getTrainNumber(); // Для доступа к строковому значению номера поезда
 public: QString getDestinationStation(); // Для доступа к пункту назначения
 public: QString getDepartureTime(); // Для доступа к времени отправления

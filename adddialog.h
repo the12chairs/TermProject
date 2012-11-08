@@ -1,8 +1,7 @@
 #ifndef ADDDIALOG_H
 #include <QDialog>
-#include <QRegExp>
-#include <QRegExpValidator>
 #define ADDDIALOG_H
+
 
 
 /*
@@ -19,8 +18,11 @@ class AddDialog : public QDialog
     
 public: explicit AddDialog(QWidget *parent = 0);
 public: ~AddDialog();
+public: void validationSet();
+private slots:
+    void on_buttonBox_accepted();
+    void on_departureTime_textChanged(const QString &arg1);
 
-private: void numValidator();
 private: Ui::AddDialog *ui;
 };
 

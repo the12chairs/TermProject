@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>401</width>
-    <height>95</height>
+    <height>112</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="description">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>0</x>
      <y>10</y>
      <width>141</width>
      <height>16</height>
@@ -26,11 +26,11 @@
     <string>Введите запись:</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>30</y>
+     <y>50</y>
      <width>399</width>
      <height>56</height>
     </rect>
@@ -56,6 +56,39 @@
       </property>
       <property name="standardButtons">
        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>391</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="number">
+      <property name="text">
+       <string>Номер поезда:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="station">
+      <property name="text">
+       <string>Станция:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="time">
+      <property name="text">
+       <string>Время отправки:</string>
       </property>
      </widget>
     </item>

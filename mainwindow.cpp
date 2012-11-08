@@ -13,8 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+   /* ui->infoList->setColumnCount(3);
+    ui->infoList->setRowCount(10);
+    ui->infoList->horizontalHeader()->setDefaultSectionSize(130);*/
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -31,5 +33,5 @@ void MainWindow::on_AddRaspis_clicked()
 
 void MainWindow::on_ShowRaspis_clicked()
 {
-    PseudoDB DB("/home/max/qtprojects/TermProject/datebase.txt");
+
 }
