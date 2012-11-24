@@ -1,5 +1,6 @@
 #ifndef PSEUDODB_H
 #include <QString>
+#include <QStringList>
 #include <QRegExp>
 #include <QFile>
 #include "train.h"
@@ -25,6 +26,7 @@ public: void writeDB(QString text); // Запись в базу
 public: QString selectDB(QRegExp where); // Выборка из базы по паттерну
 public: bool openDB(); // Открыть базу
 public: void closeDB(); // Закрыть базу
+public: int colNum();
 };
 
 #endif // PSEUDODB_H

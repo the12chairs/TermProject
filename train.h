@@ -17,7 +17,7 @@ private: QString DestinationStation; // Пункт назначения
 private: QTime DepartureTime; // Время отправления
     //Методы
 public: Train(); // Конструктор по умолчанию
-public: Train(int n, QString d, QTime t); // Перегруженный конструктор с аттрибутами
+public: Train(int n, QString d, QTime t); // Перегруженный конструктор с атрибутами
 public: ~Train();// Деструктор
 
     // Интерфейс класса

@@ -46,7 +46,7 @@ QString Train::getDestinationStation(){
 }
 
 QString Train::getDepartureTime(){
-    return this->DepartureTime.toString("hh:mm:ss");
+    return this->DepartureTime.toString("hh:mm");
 }
 
 void Train::setTrainNumber(QString n){

@@ -1,5 +1,6 @@
 #ifndef ADDDIALOG_H
 #include <QDialog>
+#include "mainwindow.h"
 #define ADDDIALOG_H
 
 
@@ -15,8 +16,10 @@ class MainWindow;
 class AddDialog : public QDialog
 {
     Q_OBJECT
-    
-public: explicit AddDialog(QWidget *parent = 0);
+
+private: MainWindow *w;
+
+public: explicit AddDialog(MainWindow *parent = 0);
 public: ~AddDialog();
 public: void validationSet();
 private slots:

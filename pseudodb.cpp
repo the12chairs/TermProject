@@ -1,4 +1,9 @@
 #include <QTextStream>
+#include <iostream>
+#include <fstream>
+#include <iterator>
+#include <algorithm>
+#include <stdexcept>
 #include "pseudodb.h"
 
 /*
@@ -38,8 +43,9 @@ void PseudoDB::writeDB(QString text){
 }
 
 bool PseudoDB::openDB(){
-    if(this->db.open(QIODevice::Append | QIODevice::Text)){
+    if(this->db.open(QIODevice::Append | QIODevice::Text | QIODevice::ReadWrite)){
         printf("DB opened");
+        colNum();
         return 1;
     }
     else
@@ -49,4 +55,13 @@ bool PseudoDB::openDB(){
 void PseudoDB::closeDB(){
     printf("DB closed");
     this->db.close();
+}
+int PseudoDB::colNum(){
+    QByteArray buf;
+    int n=-1;
+    do {
+        buf = this->db.readLine();
+        n++;
+    } while (!buf.isEmpty());
+
 }
