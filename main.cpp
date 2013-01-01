@@ -9,9 +9,9 @@
 int main(int argc, char *argv[])
 {
 
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    QApplication a(argc, argv); // Создать приложение
+    MainWindow w; // Создать главное окно
+    w.show(); // Показать главное окно
     
-    return a.exec();
+    return a.exec(); // выполнить приложение
 }

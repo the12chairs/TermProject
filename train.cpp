@@ -7,11 +7,6 @@
  */
 
 Train::Train(){ // Конструктор по умолчанию
-    /*
-    this->TrainNumber = NULL;
-    this->DestinationStation = NULL;
-    this->DepartureTime = NULL;
-    */
 }
 
 // Перегруженный конструктор
@@ -23,7 +18,6 @@ Train::Train(int n, QString d, QTime t){
 
 // Деструктор
 Train::~Train(){
-    delete this; // Нужно убирать за собой
 }
 
 // Реализация интерфейса
@@ -31,14 +25,6 @@ QString Train::getTrainNumber(){
     QString conv = QString::number(this->TrainNumber); // Костыль для конвертации int в QString
     return conv;
 }
-
-// Валидаторы на регулярных выражениях
-
-bool Train::isGoodTrainNumber(QString n){
-    return true;
-}
-
-
 
 //Комментарии излишни
 QString Train::getDestinationStation(){

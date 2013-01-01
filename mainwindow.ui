@@ -6,94 +6,89 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>464</width>
-    <height>288</height>
+    <width>514</width>
+    <height>251</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Расписание поездов</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="ShowRaspis">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>223</y>
-      <width>100</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Расписание</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="AddRaspis">
-    <property name="geometry">
-     <rect>
-      <x>119</x>
-      <y>223</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Создать</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="infoList">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>451</width>
-      <height>201</height>
+      <width>492</width>
+      <height>224</height>
      </rect>
     </property>
-    <property name="rowCount">
-     <number>0</number>
-    </property>
-    <property name="columnCount">
-     <number>3</number>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>135</number>
-    </attribute>
-    <column>
-     <property name="text">
-      <string>Номер поезда</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Пункт прибытия</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Время отпраления</string>
-     </property>
-    </column>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTableWidget" name="infoList">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <property name="columnCount">
+        <number>3</number>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>135</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Номер поезда</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Пункт прибытия</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Время отпраления</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="ShowRaspis">
+         <property name="text">
+          <string>Все расписание</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="AddRaspis">
+         <property name="text">
+          <string>Создать</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SearchNum">
+         <property name="text">
+          <string>Ввести номер</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="SearchStat">
+         <property name="text">
+          <string>Ввести станцию</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>464</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>Программа</string>
-    </property>
-    <addaction name="action"/>
-   </widget>
-   <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -108,25 +103,18 @@
     <string>Выход</string>
    </property>
   </action>
+  <action name="searchNum">
+   <property name="text">
+    <string>Поиск по номеру поезда</string>
+   </property>
+  </action>
+  <action name="searchStat">
+   <property name="text">
+    <string>Поиск по станции</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>menuBar</sender>
-   <signal>triggered(QAction*)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>199</x>
-     <y>10</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>199</x>
-     <y>149</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

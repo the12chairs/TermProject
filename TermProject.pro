@@ -16,12 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     train.cpp \
     adddialog.cpp \
-    pseudodb.cpp
+    searchnum.cpp \
+    searchstation.cpp
 
 HEADERS  += mainwindow.h \
     train.h \
     adddialog.h \
-    pseudodb.h
+    searchnum.h \
+    searchstation.h
 
 FORMS    += mainwindow.ui \
-    adddialog.ui
+    adddialog.ui \
+    searchnum.ui \
+    searchstation.ui

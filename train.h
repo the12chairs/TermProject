@@ -12,32 +12,23 @@
 class Train
 {
     //Атрибуты
-private: int TrainNumber; // Номер поезда
-private: QString DestinationStation; // Пункт назначения
-private: QTime DepartureTime; // Время отправления
+    private: int TrainNumber; // Номер поезда
+    private: QString DestinationStation; // Пункт назначения
+    private: QTime DepartureTime; // Время отправления
     //Методы
-public: Train(); // Конструктор по умолчанию
-public: Train(int n, QString d, QTime t); // Перегруженный конструктор с атрибутами
-public: ~Train();// Деструктор
+    public: Train(); // Конструктор по умолчанию
+    public: Train(int n, QString d, QTime t); // Перегруженный конструктор с атрибутами
+    public: ~Train();// Деструктор
 
     // Интерфейс класса
-public: QString getTrainNumber(); // Для доступа к строковому значению номера поезда
-public: QString getDestinationStation(); // Для доступа к пункту назначения
-public: QString getDepartureTime(); // Для доступа к времени отправления
-
-    //--------------------------------------------------------------
-    // Валидация введенных значений
-public: bool isGoodTrainNumber(QString n);
-public: bool isGoodDestinationStation(QString d);
-public: bool isGoodDepartureTime(QString t);
-    //--------------------------------------------------------------
+    public: QString getTrainNumber(); // Для доступа к строковому значению номера поезда
+    public: QString getDestinationStation(); // Для доступа к пункту назначения
+    public: QString getDepartureTime(); // Для доступа к времени отправления
 
 
-    // Общедоступные слоты для вывода результатов в форму (возможно, лишнее)
-public slots:
-    void setTrainNumber(QString n); // Задание номера поезда
-    void setDestinationStation(QString d); // Задание станции прибытия
-    void setDepartureTime(QString t); // Задание времени отбытия
+    public: void setTrainNumber(QString n); // Задание номера поезда
+    public: void setDestinationStation(QString d); // Задание станции прибытия
+    public: void setDepartureTime(QString t); // Задание времени отбытия
 
 };
 
